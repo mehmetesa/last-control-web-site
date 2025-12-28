@@ -1,171 +1,95 @@
-/* Temel Ayarlar */
 :root {
     --red: #ff0000;
     --dark-red: #8b0000;
     --black: #050505;
-    --gray: #cccccc;
-    --font-main: 'Roboto', sans-serif;
     --font-title: 'Oswald', sans-serif;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
 body {
     background-color: var(--black);
     color: white;
-    font-family: var(--font-main);
+    font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
 }
 
-/* Karartma Efekti */
 .vignette {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(circle, transparent 30%, black 100%);
+    background: radial-gradient(circle, transparent 20%, black 120%);
     pointer-events: none;
     z-index: 5;
 }
 
-/* Navigasyon */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
+    padding: 20px 8%;
     position: fixed;
     width: 100%;
     z-index: 100;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
 }
 
-.logo {
-    font-family: var(--font-title);
-    font-size: 28px;
-    letter-spacing: 3px;
-    font-weight: bold;
-}
-
+.logo { font-family: var(--font-title); font-size: 32px; letter-spacing: 2px; }
 .logo span { color: var(--red); }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li { margin-left: 30px; }
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-    text-transform: uppercase;
-    transition: 0.3s;
-    letter-spacing: 1px;
-}
-
+.nav-right { display: flex; align-items: center; }
+.nav-links { display: flex; list-style: none; margin-right: 20px; }
+.nav-links li { margin-left: 25px; }
+.nav-links a { text-decoration: none; color: white; font-size: 13px; text-transform: uppercase; transition: 0.3s; }
 .nav-links a:hover { color: var(--red); }
 
-/* Hero Bölümü */
+.lang-switcher {
+    background: transparent;
+    border: 1px solid var(--red);
+    color: white;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-family: var(--font-title);
+    transition: 0.3s;
+}
+.lang-switcher:hover { background: var(--red); }
+
 .hero {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url('https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=2070'); /* Temsili Korku Resmi */
+    /* İSTEDİĞİN GÖRSEL BURAYA EKLENDİ */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), 
+                url('https://image.api.playstation.com/vulcan/ap/rnd/202409/2009/b66655dabea2ee137e3e56e334a4878a364f2218d0e05fd4.png');
     background-size: cover;
     background-position: center;
     text-align: center;
 }
 
-.glitch {
-    font-family: var(--font-title);
-    font-size: 100px;
-    position: relative;
-    color: white;
-    letter-spacing: 10px;
-}
-
-/* Glitch Efekti Animasyonu */
-.glitch::before, .glitch::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: var(--black);
-}
-
-.glitch::before {
-    left: 2px;
-    text-shadow: -2px 0 var(--red);
-    clip: rect(44px, 450px, 56px, 0);
-    animation: glitch-anim 5s infinite linear alternate-reverse;
-}
-
-.glitch::after {
-    left: -2px;
-    text-shadow: -2px 0 blue;
-    clip: rect(44px, 450px, 56px, 0);
-    animation: glitch-anim 2s infinite linear alternate-reverse;
-}
-
-@keyframes glitch-anim {
-    0% { clip: rect(10px, 9999px, 20px, 0); }
-    20% { clip: rect(80px, 9999px, 90px, 0); }
-    40% { clip: rect(30px, 9999px, 40px, 0); }
-    100% { clip: rect(60px, 9999px, 70px, 0); }
-}
-
-/* Butonlar */
-.cta-group { margin-top: 30px; }
+h1 { font-family: var(--font-title); font-size: 120px; letter-spacing: 15px; margin-bottom: 10px; }
 
 .btn {
-    padding: 15px 35px;
+    padding: 15px 40px;
     font-family: var(--font-title);
-    border: 1px solid white;
+    border: none;
     cursor: pointer;
-    transition: 0.4s;
-    margin: 10px;
-    background: transparent;
-    color: white;
-}
-
-.btn.primary {
     background: var(--dark-red);
-    border-color: var(--dark-red);
-}
-
-.btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255,0,0,0.4);
-}
-
-/* Bölümler */
-.content-section {
-    padding: 100px 20%;
-    text-align: center;
-}
-
-.section-title {
-    font-family: var(--font-title);
-    font-size: 40px;
-    margin-bottom: 30px;
-    color: var(--dark-red);
-}
-
-.description {
-    line-height: 2;
+    color: white;
     font-size: 18px;
-    color: var(--gray);
+    transition: 0.3s;
 }
+.btn:hover { background: var(--red); transform: scale(1.05); }
+
+.content-section { padding: 100px 20%; text-align: center; background: #080808; }
+.section-title { font-family: var(--font-title); font-size: 45px; margin-bottom: 25px; color: var(--red); }
+.description { line-height: 1.8; font-size: 19px; color: #aaa; }
 
 footer {
-    padding: 40px;
+    padding: 60px;
     text-align: center;
-    font-size: 12px;
-    border-top: 1px solid #111;
+    background: black;
+    border-top: 1px solid #1a1a1a;
 }
+.credits p { font-family: var(--font-title); color: var(--red); letter-spacing: 2px; margin-bottom: 10px; }
+.credits h3 { font-size: 24px; letter-spacing: 5px; margin-bottom: 30px; }
+.copyright { font-size: 11px; opacity: 0.4; }
