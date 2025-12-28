@@ -60,7 +60,7 @@ nav {
     align-items: center;
     /* İSTEDİĞİN GÖRSEL BURAYA EKLENDİ */
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), 
-                url('https://image.api.playstation.com/vulcan/ap/rnd/202409/2009/b66655dabea2ee137e3e56e334a4878a364f2218d0e05fd4.png');
+                url(https://image.api.playstation.com/vulcan/ap/rnd/202409/2009/b66655dabea2ee137e3e56e334a4878a364f2218d0e05fd4.png);
     background-size: cover;
     background-position: center;
     text-align: center;
