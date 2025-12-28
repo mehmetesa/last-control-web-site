@@ -78,7 +78,7 @@
 
 ### **[🎮 VISIT ON STEAM](https://store.steampowered.com/)**
 
-### **[🌐 OFFICIAL WEBSITE](https://mehmetesa.github.io/last_control_web_site.io/)**
+### **[🌐 OFFICIAL WEBSITE](https://mehmetesa.github.io/last-control-web-site/)**
 
 *Game is currently in Alpha development* 🎧🌙
 
