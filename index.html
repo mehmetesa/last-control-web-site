@@ -14,30 +14,30 @@
     <header>
         <nav>
             <div class="logo">FLASH<span>IN</span></div>
-            <ul class="nav-links">
-                <li><a href="#home">Giriş</a></li>
-                <li><a href="#about">Hikaye</a></li>
-                <li><a href="#media">Medya</a></li>
-                <li><a href="#contact">İletişim</a></li>
-            </ul>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#home" id="nav-home">Giriş</a></li>
+                    <li><a href="#about" id="nav-about">Hikaye</a></li>
+                </ul>
+                <button id="lang-btn" class="lang-switcher">EN</button>
+            </div>
         </nav>
     </header>
 
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1 class="glitch" data-text="LAST CONTROL">LAST CONTROL</h1>
-                <p>Karanlıkta kalan son kontrol sen misin?</p>
+                <h1 id="main-title">LAST CONTROL</h1>
+                <p id="hero-sub">Karanlıkta kalan son kontrol sen misin?</p>
                 <div class="cta-group">
-                    <button class="btn primary">FRAGMANI İZLE</button>
-                    <button class="btn secondary">İSTEK LİSTESİNE EKLE</button>
+                    <button class="btn primary" id="btn-trailer">FRAGMANI İZLE</button>
                 </div>
             </div>
         </section>
 
         <section id="about" class="content-section">
-            <h2 class="section-title">HİKAYE</h2>
-            <p class="description">
+            <h2 class="section-title" id="story-title">HİKAYE</h2>
+            <p class="description" id="story-desc">
                 Terk edilmiş bir araştırma tesisinde uyandığında, elinde sadece bozulmaya yüz tutmuş bir telsiz var. 
                 Sesler sana ne yapman gerektiğini söylüyor ama onlara güvenebilir misin? 
                 <strong>Last Control</strong>, Flash In'in sunduğu en derin psikolojik gerilim deneyimi.
@@ -46,7 +46,11 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 FLASH IN STUDIOS. Bütün hakları saklıdır.</p>
+        <div class="credits">
+            <p id="footer-credits">Emeği Geçenler</p>
+            <h3>ESAT • EMİR • MEB</h3>
+        </div>
+        <p class="copyright">&copy; 2025 FLASH IN STUDIOS. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
